@@ -1,0 +1,132 @@
+/* css/product-detail.css */
+body {
+    background: #191b24;
+  }
+  
+.detail-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+  
+  .detail-image {
+    flex: 1.5;
+    padding: 60px;
+  }
+  .detail-image img {
+    display: block;
+    width: 100%;
+    margin-top: 100px;        /* thay padding-top */
+    border-radius: 10px;
+  }
+  .detail-info {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .detail-info h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  .overview {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .price {
+    font-size: 2.5rem;
+    color: #d4af37;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .info-box {
+    background: #f0f2f5;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .info-box div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+  }
+  .info-box div:last-child {
+    border-bottom: none;
+  }
+  .info-box span:first-child {
+    font-weight: 600;
+  }
+  .chat-button {
+    align-self: flex-start;
+    background: #1b1f3b;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  .chat-button:hover {
+    background: #ec1e1e;
+  }
+  /* Giả sử navbar cố định, cao 60px */
+:root {
+    --navbar-height: 60px;
+  }
+  
+  /* Nếu bạn chèn content trực tiếp vào body: */
+  body {
+    padding-top: var(--navbar-height);
+  }
+  
+  /* Hoặc chỉ áp dụng cho wrapper chính */
+  .detail-wrapper {
+    margin-top: var(--navbar-height +100px);
+  }
+  /* trong style.css hoặc product-detail.css, tuỳ file bạn dùng chung */
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 1.5rem;  /* ← giảm padding dọc, ngang gọn hơn */
+    background: transparent;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  nav.scrolled {
+    /* màu nền khi cuộn */
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  /* Ban đầu để ẩn và đặt vị trí */
+.detail-image {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+  }
+  
+  .detail-info {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.7s ease-out 0.2s, opacity 0.7s ease-out 0.2s;
+  }
+  
+  /* Khi có class .enter thì sẽ chạy animation */
+  .detail-image.enter {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .detail-info.enter {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

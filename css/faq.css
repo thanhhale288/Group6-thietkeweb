@@ -1,0 +1,106 @@
+/* ===== Hero FAQ ===== */
+.hero-faq {
+    background: url('../images/faq-hero.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 1rem;
+  }
+  .hero-faq h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero-faq p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  /* ===== FAQ Container ===== */
+  .faq-container {
+    max-width: 800px;
+    margin: 3rem auto;
+  }
+  .faq-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  /* Câu hỏi */
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 1.25rem;
+    font-size: 1.1rem;
+    background: #1a1a1a;
+    color: #f9f9f9;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+  }
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 1.25rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+  }
+  .faq-question.open {
+    background: #333;
+  }
+  .faq-question.open::after {
+    transform: rotate(45deg);
+  }
+  
+  /* Đáp án */
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 1.25rem;
+    background: #f9f9f9;
+  }
+  .faq-answer p {
+    margin: 1rem 0;
+    line-height: 1.6;
+  }
+  .faq-answer a {
+    color: #1a73e8;
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .hero-faq h1 { font-size: 2rem; }
+    .faq-question { font-size: 1rem; padding: 0.75rem 1rem; }
+    .faq-answer { padding: 0 1rem; }
+  }
+  .hero-faq .hero-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #c8a165;       /* hoặc biến --accent */
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .hero-faq .hero-btn:hover {
+    background: #9e7c47;
+  }
+  :root {
+    --navbar-height: 80px; /* hoặc chính xác chiều cao của bạn */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar-height);
+  }
+  #faq-list {
+    /* Bù thẳng vào đúng chiều cao navbar */
+    scroll-margin-top: 80px;
+  }
+  

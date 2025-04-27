@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website bán xe sang cao cấp" />
+  <title>Giới thiệu – NEU Auto</title>
+
+  <!-- Link đến stylesheet chung -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Header / Nav ===== -->
+  <header>
+    <div class="container">
+      <nav>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="images/logo.svg" alt="Xe Sang Logo" /> <!-- Đặt ảnh logo -->
+          <span class="logo-text">NEU Auto</span> 
+        </a>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="news.html">Tin tức</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="about.html"class="active">Giới thiệu</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="#" id="nav-login">Đăng nhập</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Overlay & Login Modal ===== -->
+  <div id="overlay" class="overlay hidden"></div>
+
+  <div id="login-modal" class="modal hidden">
+    <div class="modal-header">
+      <h3>Đăng nhập</h3>
+      <button id="close-modal" class="close-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="login-user">Tên người dùng hoặc địa chỉ email</label>
+        <input type="text" id="login-user" placeholder="Nhập tên hoặc email">
+      </div>
+      <div class="form-group">
+        <label for="login-pass">Mật khẩu</label>
+        <div class="input-with-icon">
+          <input type="password" id="login-pass" placeholder="Nhập mật khẩu">
+          <button type="button" class="toggle-visibility" aria-label="Hiện mật khẩu">👁️</button>
+        </div>
+      </div>
+      <div class="form-options">
+        <label><input type="checkbox" id="remember"> Ghi nhớ</label>
+        <a href="#" class="forgot">Quên mật khẩu?</a>
+      </div>
+      <button id="btn-login" class="btn-primary">Đăng nhập</button>
+    </div>
+  </div>
+  <!-- ===== Hero Section / Banner ===== -->
+  <section class="hero-about">
+    <div class="container hero-content">
+      <h1>Giới thiệu về chúng tôi</h1>
+      <p>NEU Auto - Đam mê xe sang, đam mê cuộc sống!</p>
+      <p>Chúng tôi- Neuers cung cấp những mẫu xe sang đẳng cấp nhất, với chất lượng dịch vụ hoàn hảo.</p>
+      <a href="#core-values" class="btn-primary">Tìm hiểu thêm</a>
+    </div>
+  </section>
+  
+  <!-- ================== Đối tác ================== -->
+<section class="partners">
+  <div class="container">
+    <h2>ĐỐI TÁC</h2>
+    <div class="partners-grid">
+      <div class="partner-item">
+        <img src="images/porsche.png" alt="Porsche Logo">
+      </div>
+      <div class="partner-item">
+        <img src="images/ferrari.png" alt="Ferrari Logo">
+      </div>
+      <div class="partner-item">
+        <img src="images/lamborghini.png" alt="Lamborghini Logo">
+      </div>
+      <div class="partner-item">
+        <img src="images/rolls-royce.png" alt="Rolls Royce Logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider-gold">
+
+  <section id="core-values" class="core-values">
+    <div class="container core-values-wrapper">
+      <!-- Ảnh bên trái -->
+      <div class="core-image">
+        <img src="images/core-image.jpg" alt="Giá trị cốt lõi NEU Auto">
+      </div>
+  
+      <!-- Nội dung bên phải -->
+      <div class="core-content">
+        <h2>Giá trị cốt lõi</h2>
+        <div class="core-items">
+          <div class="core-item">
+            <h3>Phi lợi nhuận</h3>
+            <p>NEU Auto là tổ chức phi lợi nhuận. Tất cả khoản tài trợ sẽ được sử dụng với mục đích cộng đồng.</p>
+          </div>
+          <div class="core-item">
+            <h3>Kết nối</h3>
+            <p>Chúng tôi luôn sẵn sàng mở rộng phạm vi kết nối với tất cả các đối tác và khách hàng trên khắp cả nước.</p>
+          </div>
+          <div class="core-item">
+            <h3>Con người</h3>
+            <p>Con người là trung tâm; phát triển con người chính là phát triển thương hiệu của chúng tôi.</p>
+          </div>
+          <div class="core-item">
+            <h3>Kiến thức</h3>
+            <p>Các khóa đào tạo, hội thảo, giao lưu… nhằm mang lại kiến thức giá trị cho tất cả mọi người.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+<hr class="divider-gold">
+<!-- ================== Giới thiệu NEU Auto ================== -->
+  <section class="about-slider">
+    <button class="slider-btn prev" aria-label="Previous slide">&lt;</button>
+    <div class="slides-wrapper">
+      <div class="slides">
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img src="images/neu.jpg" alt="Giới thiệu NEU Auto">
+          <div class="caption">
+            <h2>GIỚI THIỆU VỀ CHÚNG TÔI</h2>
+            <p>Chúng tôi là đại lý xe sang khởi nguồn từ một giấc mơ táo bạo của nhóm sinh viên NEU – đầy đam mê và khát khao xe sang.</p>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img src="images/neu2.jpg" alt="Lịch sử hình thành">
+          <div class="caption">
+            <h2>LỊCH SỬ HÌNH THÀNH</h2>
+            <p>Câu chuyện bắt đầu từ những ngày đầu trên giảng đường NEU, khi bốn bạn trẻ chung khát vọng khởi nghiệp về ô tô.</p>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img src="images/neu3.jpg" alt="Sứ mệnh">
+          <div class="caption">
+            <h2>SỨ MỆNH</h2>
+            <p>“Mang trải nghiệm xe sang đến gần hơn với người Việt” – tư vấn chuyên sâu, minh bạch và hậu mãi tận tâm.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="slider-btn next" aria-label="Next slide">&gt;</button>
+    <div class="dots"></div>
+  </section>  
+  
+<!-- ================== Team Section ================== -->
+<section class="team">
+  <div class="container">
+    <h2> Đội ngũ sáng lập &amp; Điều hành</h2>
+    <p class="team-intro">Những con người đã và đang dẫn dắt NEU Auto đến thành công.</p>
+
+    <div class="team-grid">
+      <!-- Member 1 -->
+      <div class="team-member">
+        <img src="images/le-thanh-ha.jpg" alt="Lê Thanh Hà">
+        <h3>Lê Thanh Hà</h3>
+        <p class="role">CEO</p>
+      </div>
+      <!-- Member 2 -->
+      <div class="team-member">
+        <img src="images/thanhxuanhanoi.jpg" alt="Trịnh Thị Thanh Xuân">
+        <h3>Trịnh Thị Thanh Xuân</h3>
+        <p class="role">Trưởng phòng kinh doanh</p>
+      </div>
+      <!-- Member 3 -->
+      <div class="team-member">
+        <img src="images/nguyen-van-tho.jpg" alt="Nguyễn Văn Thọ">
+        <h3>Nguyễn Văn Thọ</h3>
+        <p class="role">Chuyên viên kỹ thuật &amp; kiểm định</p>
+      </div>
+      <!-- Member 4 -->
+      <div class="team-member">
+        <img src="images/linhle.jpg" alt="Linh Lê">
+        <h3>Linh Lê</h3>
+        <p class="role">Phụ trách marketing &amp; truyền thông</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="js/scripts.js"></script>
+<!-- ===== Site Footer ===== -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <!-- Cột Liên hệ -->
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <p><strong>Email:</strong> boyneu2808@gmail.com</p>
+      <p><strong>Địa chỉ:</strong> Đại học Kinh tế Quốc dân, 207 Giải Phóng, Phường Đồng Tâm, Q. Hai Bà Trưng, Hà Nội</p>
+      <p><strong>SDT:</strong> (+84) 961 654 937</p>
+    </div>
+    <!-- Cột Liên kết nhanh -->
+    <div class="footer-col">
+      <h4>Liên kết nhanh</h4>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="news.html">NEU Auto News</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright: ©2024 - NEU Auto. All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>

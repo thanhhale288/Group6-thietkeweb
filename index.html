@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website bán xe sang cao cấp" />
+  <title>Trang chủ – Bán Xe Sang</title>
+
+  <!-- Link đến stylesheet chung -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Header / Nav ===== -->
+  <header>
+    <div class="container">
+      <nav>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="images/logo.svg" alt="Xe Sang Logo" /> <!-- Đặt ảnh logo -->
+          <span class="logo-text">NEU Auto</span> 
+        </a>
+        <ul>
+          <li><a href="index.html" class="active">Trang chủ</a></li>
+          <li><a href="news.html">Tin tức</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="#" id="nav-login">Đăng nhập</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Overlay & Login Modal ===== -->
+  <div id="overlay" class="overlay hidden"></div>
+
+  <div id="login-modal" class="modal hidden">
+    <div class="modal-header">
+      <h3>Đăng nhập</h3>
+      <button id="close-modal" class="close-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="login-user">Tên người dùng hoặc địa chỉ email</label>
+        <input type="text" id="login-user" placeholder="Nhập tên hoặc email">
+      </div>
+      <div class="form-group">
+        <label for="login-pass">Mật khẩu</label>
+        <div class="input-with-icon">
+          <input type="password" id="login-pass" placeholder="Nhập mật khẩu">
+          <button type="button" class="toggle-visibility" aria-label="Hiện mật khẩu">👁️</button>
+        </div>
+      </div>
+      <div class="form-options">
+        <label><input type="checkbox" id="remember"> Ghi nhớ</label>
+        <a href="#" class="forgot">Quên mật khẩu?</a>
+      </div>
+      <button id="btn-login" class="btn-primary">Đăng nhập</button>
+    </div>
+  </div>
+  <!-- ===== Hero Section / Banner ===== -->
+  <section class="hero hero--video">
+    <!-- Video nền chỉ cho index -->
+    <video
+      class="hero-video"
+      autoplay 
+      muted
+      loop
+      playsinline
+    >
+      <source src="images/car.mp4" type="video/mp4" />
+      Trình duyệt của bạn không hỗ trợ video.
+    </video>
+    <!-- Nội dung text/chữ và nút -->
+    <div class="container hero-content">
+      <h2 class="hero-subtitle">NEU Auto</h2>
+      <h1>Khám phá xe sang đẳng cấp</h1>
+      <p>Mẫu mới 2025 – Giá ưu đãi cực sốc!</p>
+      <a href="#filter-cars" class="btn-primary">Xem ngay</a>
+      <a href="news.html" class="btn-primary" style="margin-left:2rem;">NEU Auto News</a>
+
+    </div>
+  </section>
+  <hr class="divider-gold">
+ <!-- ===== Danh sách xe đang bán ===== -->
+ <section id="filter-cars" class="filter-cars container">
+  <!-- Filter bar -->
+  <ul class="car-filters">
+    <li class="active" data-filter="all">
+      <button>
+        <i class="fas fa-list"></i>
+        <span>Tất Cả (20)</span>
+      </button>
+    </li>
+    <li data-filter="rolls-royce">
+      <button>
+        <img src="images/rolls-royce.png" alt="Rolls-Royce">
+        <span>Rolls-Royce (5)</span>
+      </button>
+    </li>
+    <li data-filter="lamborghini">
+      <button>
+        <img src="images/lamborghini.png" alt="Lamborghini">
+        <span>Lamborghini (5)</span>
+      </button>
+    </li>
+    <li data-filter="ferrari">
+      <button>
+        <img src="images/ferrari.png" alt="Ferrari">
+        <span>Ferrari (5)</span>
+      </button>
+    </li>
+    <li data-filter="porsche">
+      <button>
+        <img src="images/porsche.png" alt="Porsche">
+        <span>Porsche (5)</span>
+      </button>
+    </li>
+  </ul>
+
+  <!-- Grid xe -->
+  <div class="cars-grid">
+    <!-- Rolls-Royce -->
+    <a href="product-detail.html?id=rolls-royce-cullinan"
+       class="car-card"
+       data-id="rolls-royce-cullinan"
+       data-brand="rolls-royce">
+      <img src="images/Rolls-Royce Cullinan review.png" alt="Rolls-Royce Cullinan">
+      <div class="card-info">
+        <h3>Rolls-Royce Cullinan</h3>
+        <p class="price">$400,000</p>
+        <p class="prepay">Trả trước: $100,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=rolls-royce-dawn"
+       class="car-card"
+       data-id="rolls-royce-dawn"
+       data-brand="rolls-royce">
+      <img src="images/rrdawn.png" alt="Rolls-Royce Dawn">
+      <div class="card-info">
+        <h3>Rolls-Royce Dawn</h3>
+        <p class="price">$360,000</p>
+        <p class="prepay">Trả trước: $110,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=rolls-royce-ghost"
+       class="car-card"
+       data-id="rolls-royce-ghost"
+       data-brand="rolls-royce">
+      <img src="images/RR ghost.png" alt="Rolls-Royce Ghost">
+      <div class="card-info">
+        <h3>Rolls-Royce Ghost</h3>
+        <p class="price">$350,000</p>
+        <p class="prepay">Trả trước: $75,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=rolls-royce-phantom"
+       class="car-card"
+       data-id="rolls-royce-phantom"
+       data-brand="rolls-royce">
+      <img src="images/RRPhantom-Scintilla-2.PNG" alt="Rolls-Royce Phantom">
+      <div class="card-info">
+        <h3>Rolls-Royce Phantom</h3>
+        <p class="price">$550,000</p>
+        <p class="prepay">Trả trước: $150,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=rolls-royce-wraith"
+       class="car-card"
+       data-id="rolls-royce-wraith"
+       data-brand="rolls-royce">
+      <img src="images/RRWraith.png" alt="Rolls-Royce Wraith">
+      <div class="card-info">
+        <h3>Rolls-Royce Wraith</h3>
+        <p class="price">$330,000</p>
+        <p class="prepay">Trả trước: $80,000</p>
+      </div>
+    </a>
+  
+    <!-- Lamborghini -->
+    <a href="product-detail.html?id=lamborghini-aventador-svj"
+       class="car-card"
+       data-id="lamborghini-aventador-svj"
+       data-brand="lamborghini">
+      <img src="images/lamborghini-aventador-svj-3-15350912047331197806606.webp" alt="Aventador SVJ">
+      <div class="card-info">
+        <h3>Lamborghini Aventador SVJ</h3>
+        <p class="price">$650,000</p>
+        <p class="prepay">Trả trước: $200,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=lamborghini-huracan-evo"
+       class="car-card"
+       data-id="lamborghini-huracan-evo"
+       data-brand="lamborghini">
+      <img src="images/lambo huracan.png" alt="Huracán EVO">
+      <div class="card-info">
+        <h3>Lamborghini Huracán EVO</h3>
+        <p class="price">$320,000</p>
+        <p class="prepay">Trả trước: $85,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=lamborghini-sian-fkp37"
+       class="car-card"
+       data-id="lamborghini-sian-fkp37"
+       data-brand="lamborghini">
+      <img src="images/Lamborghini-Sian-41.png" alt="Sián FKP 37">
+      <div class="card-info">
+        <h3>Lamborghini Sián FKP 37</h3>
+        <p class="price">$600,000</p>
+        <p class="prepay">Trả trước: $165,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=lamborghini-urus"
+       class="car-card"
+       data-id="lamborghini-urus"
+       data-brand="lamborghini">
+      <img src="images/lambo-urus.jpg" alt="Urus">
+      <div class="card-info">
+        <h3>Lamborghini Urus</h3>
+        <p class="price">$250,000</p>
+        <p class="prepay">Trả trước: $70,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=lamborghini-veneno-roadster"
+       class="car-card"
+       data-id="lamborghini-veneno-roadster"
+       data-brand="lamborghini">
+      <img src="images/lamborghini_veneno_roadster_2_ZFGL.png" alt="Veneno Roadster">
+      <div class="card-info">
+        <h3>Lamborghini Veneno Roadster</h3>
+        <p class="price">$500,000</p>
+        <p class="prepay">Trả trước: $140,000</p>
+      </div>
+    </a>
+  
+    <!-- Ferrari -->
+    <a href="product-detail.html?id=ferrari-812-gts"
+       class="car-card"
+       data-id="ferrari-812-gts"
+       data-brand="ferrari">
+      <img src="images/ferrari 812.webp" alt="812 GTS">
+      <div class="card-info">
+        <h3>Ferrari 812 GTS</h3>
+        <p class="price">$400,000</p>
+        <p class="prepay">Trả trước: $50,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=ferrari-f8-tributo"
+       class="car-card"
+       data-id="ferrari-f8-tributo"
+       data-brand="ferrari">
+      <img src="images/Ferrari_F8_Tributo_Genf_2019_1Y7A5665.jpg" alt="F8 Tributo">
+      <div class="card-info">
+        <h3>Ferrari F8 Tributo</h3>
+        <p class="price">$270,000</p>
+        <p class="prepay">Trả trước: $150,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=ferrari-roma"
+       class="car-card"
+       data-id="ferrari-roma"
+       data-brand="ferrari">
+      <img src="images/ferrari_Roma-7.jpg" alt="Roma">
+      <div class="card-info">
+        <h3>Ferrari Roma</h3>
+        <p class="price">$247,000</p>
+        <p class="prepay">Trả trước: $100,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=ferrari-sf90-stradale"
+       class="car-card"
+       data-id="ferrari-sf90-stradale"
+       data-brand="ferrari">
+      <img src="images/ferrari sf90.webp" alt="SF90 Stradale">
+      <div class="card-info">
+        <h3>Ferrari SF90 Stradale</h3>
+        <p class="price">$507,000</p>
+        <p class="prepay">Trả trước: $250,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=laferrari"
+       class="car-card"
+       data-id="laferrari"
+       data-brand="ferrari">
+      <img src="images/Laferrari.jpg" alt="LaFerrari">
+      <div class="card-info">
+        <h3>LaFerrari</h3>
+        <p class="price">$500,000</p>
+        <p class="prepay">Trả trước: $300,000</p>
+      </div>
+    </a>
+  
+    <!-- Porsche -->
+    <a href="product-detail.html?id=porsche-911-turbo-s"
+       class="car-card"
+       data-id="porsche-911-turbo-s"
+       data-brand="porsche">
+      <img src="images/porsche 911.jpg" alt="911 Turbo S">
+      <div class="card-info">
+        <h3>Porsche 911 Turbo S</h3>
+        <p class="price">$520,000</p>
+        <p class="prepay">Trả trước: $200,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=porsche-cayenne-turbo-gt"
+       class="car-card"
+       data-id="porsche-cayenne-turbo-gt"
+       data-brand="porsche">
+      <img src="images/Porsche_Cayenne_Turbo_GT_5.webp" alt="Cayenne Turbo GT">
+      <div class="card-info">
+        <h3>Porsche Cayenne Turbo GT</h3>
+        <p class="price">$300,000</p>
+        <p class="prepay">Trả trước: $140,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=porsche-macan-gts"
+       class="car-card"
+       data-id="porsche-macan-gts"
+       data-brand="porsche">
+      <img src="images/porsche macan.webp" alt="Macan GTS">
+      <div class="card-info">
+        <h3>Porsche Macan GTS</h3>
+        <p class="price">$180,000</p>
+        <p class="prepay">Trả trước: $60,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=porsche-panamera-turbo"
+       class="car-card"
+       data-id="porsche-panamera-turbo"
+       data-brand="porsche">
+      <img src="images/porsche-panamera-turbo-s-e-hybrid.webp" alt="Panamera Turbo">
+      <div class="card-info">
+        <h3>Porsche Panamera Turbo</h3>
+        <p class="price">$350,000</p>
+        <p class="prepay">Trả trước: $130,000</p>
+      </div>
+    </a>
+  
+    <a href="product-detail.html?id=porsche-taycan-turbo-s"
+       class="car-card"
+       data-id="porsche-taycan-turbo-s"
+       data-brand="porsche">
+      <img src="images/Porsche_Taycan_Turbo_S_0037-scaled.webp" alt="Taycan Turbo S">
+      <div class="card-info">
+        <h3>Porsche Taycan Turbo S</h3>
+        <p class="price">$430,000</p>
+        <p class="prepay">Trả trước: $210,000</p>
+      </div>
+    </a>
+  </div>
+  
+ <!-- View More button -->
+ <div class="view-more-wrapper">
+  <button id="view-more" class="btn-primary">Xem thêm</button>
+</div>
+</section>
+  
+
+  <hr class="divider-gold">
+  <!-- ===== Tuyển dụng ===== -->
+<section class="jobs-section">
+  <div class="container">
+    <h2 class="section-title">Tuyển dụng</h2>
+    <div class="jobs-grid">
+      <a href="careers.html?job=1" class="job-card">
+        <div class="logo">
+          <img src="images/logo1.png" alt="Logo Công ty A">
+        </div>
+        <div class="details">
+          <h3>Excutive Assistant-Trợ lý CEO</h3>
+          <p class="company">NEU Auto - Chuỗi Showroom Siêu xe lớn nhất Việt Nam</p>
+          <div class="meta">
+            <span class="tag">Thỏa thuận</span>
+            <span class="location">Hà Nội</span>
+          </div>
+        </div>
+      </a>
+      <a href="careers.html?job=2" class="job-card">
+        <div class="logo">
+          <img src="images/logo2.png" alt="Logo Công ty B">
+        </div>
+        <div class="details">
+          <h3>Receptionest - Lễ tân Showroom</h3>
+          <p class="company">NEU Auto - Chuỗi Showroom Siêu xe lớn nhất Việt Nam</p>
+          <div class="meta">
+            <span class="tag">10–15 triệu</span>
+            <span class="location">Hà Nội</span>
+          </div>
+        </div>
+      </a>
+      <a href="careers.html?job=3" class="job-card">
+        <div class="logo">
+          <img src="images/logo3.png" alt="Logo Công ty C">
+        </div>
+        <div class="details">
+          <h3>Sales Excutive - Chuyên viên Kinh doanh</h3>
+          <p class="company">NEU Auto - Chuỗi Showroom Siêu xe lớn nhất Việt Nam</p>
+          <div class="meta">
+            <span class="tag">18–25 triệu</span>
+            <span class="location">Đà Nẵng</span>
+          </div>
+        </div>
+      </a>
+      <a href="careers.html?job=4" class="job-card">
+        <div class="logo">
+          <img src="images/logo4.png" alt="Logo Công ty D">
+        </div>
+        <div class="details">
+          <h3>Tiktoker - Content Creator</h3>
+          <p class="company">NEU Auto - Chuỗi Showroom Siêu xe lớn nhất Việt Nam</p>
+          <div class="meta">
+            <span class="tag">7–10 triệu</span>
+            <span class="location">Hồ Chí Minh</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- ===== Liên hệ ngay ===== -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta__card">
+        <div class="contact-cta__content">
+          <h2>NEU Auto Contact</h2>
+          <p>
+            Nếu có bất kỳ mong muốn kết nối – hợp tác với chúng mình, xin đừng ngần ngại nhấn vào nút bên dưới.
+            NEU Auto sẽ phản hồi bạn trong thời gian sớm nhất!
+          </p>
+          <a href="contact.html" class="btn-contact">Liên hệ ngay</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <script src="js/scripts.js"></script>
+
+<!-- ===== Site Footer ===== -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <!-- Cột Liên hệ -->
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <p><strong>Email:</strong> boyneu2808@gmail.com</p>
+      <p><strong>Địa chỉ:</strong> Đại học Kinh tế Quốc dân, 207 Giải Phóng, Phường Đồng Tâm, Q. Hai Bà Trưng, Hà Nội</p>
+      <p><strong>SDT:</strong> (+84) 961 654 937</p>
+    </div>
+
+    <!-- Cột Liên kết nhanh -->
+    <div class="footer-col">
+      <h4>Liên kết nhanh</h4>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="news.html">NEU Auto News</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright: ©2024 - NEU Auto. All Rights Reserved</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

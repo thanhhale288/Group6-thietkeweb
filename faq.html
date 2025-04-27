@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website bán xe sang cao cấp" />
+  <title>FAQ – NEU Auto</title>
+
+  <!-- Link đến stylesheet chung -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/faq.css"><!-- riêng -->
+</head>
+<body>
+
+  <!-- ===== Header / Nav ===== -->
+  <header>
+    <div class="container">
+      <nav>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="images/logo.svg" alt="Xe Sang Logo" /> <!-- Đặt ảnh logo -->
+          <span class="logo-text">NEU Auto</span> 
+        </a>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="news.html">Tin tức</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="#" id="nav-login">Đăng nhập</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Overlay & Login Modal ===== -->
+  <div id="overlay" class="overlay hidden"></div>
+
+  <div id="login-modal" class="modal hidden">
+    <div class="modal-header">
+      <h3>Đăng nhập</h3>
+      <button id="close-modal" class="close-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="login-user">Tên người dùng hoặc địa chỉ email</label>
+        <input type="text" id="login-user" placeholder="Nhập tên hoặc email">
+      </div>
+      <div class="form-group">
+        <label for="login-pass">Mật khẩu</label>
+        <div class="input-with-icon">
+          <input type="password" id="login-pass" placeholder="Nhập mật khẩu">
+          <button type="button" class="toggle-visibility" aria-label="Hiện mật khẩu">👁️</button>
+        </div>
+      </div>
+      <div class="form-options">
+        <label><input type="checkbox" id="remember"> Ghi nhớ</label>
+        <a href="#" class="forgot">Quên mật khẩu?</a>
+      </div>
+      <button id="btn-login" class="btn-primary">Đăng nhập</button>
+    </div>
+  </div>
+
+  <!-- ===== Hero Section / Banner ===== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Câu hỏi thường gặp</h1>
+      <p>Giải đáp mọi thắc mắc của bạn về mua xe, tài chính, bảo hành,…</p>
+      <a href="#faq-list" class="btn-primary hero-btn">Xem chi tiết</a>
+    </div>
+  </section>
+  <hr class="divider-gold">
+    <!-- Main FAQ -->
+    <main  id="faq-list" class="faq-container container">
+      <div class="faq-item">
+        <button class="faq-question">1. Làm sao để đặt lịch lái thử?</button>
+        <div class="faq-answer">
+          <p>Bạn có thể điền form <a href="contact.html">Liên hệ</a> hoặc gọi trực tiếp hotline của chúng tôi. Đội ngũ sẽ liên hệ xác nhận và sắp xếp cho bạn lịch lái thử thuận tiện nhất.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">2. Có nhận đổi xe cũ (trade-in) không?</button>
+        <div class="faq-answer">
+          <p>Có. Chúng tôi hỗ trợ định giá miễn phí và thanh toán ngay trong ngày. Vui lòng đem xe đến showroom để được thẩm định chi tiết.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">3. Chính sách bảo hành như thế nào?</button>
+        <div class="faq-answer">
+          <p>Tất cả xe mới được bảo hành chính hãng tối thiểu 2 năm hoặc 50,000 km (tùy điều kiện nào đến trước). Quý khách hãy liên hệ nhân viên để xem chính sách đầy đủ.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">4. Tôi cần hỗ trợ khẩn cấp thì liên hệ ai?</button>
+        <div class="faq-answer">
+          <p>Hotline hỗ trợ 24/7: <strong>(+84) 961 654 937</strong> hoặc email: <a href="mailto:boyneu2808@gmail.com">boyneu2808@gmail.com</a>.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">5. Tôi không mua xe nhưng vào Showroom  xem nhân viên quay Tiktok được không?</button>
+        <div class="faq-answer">
+          <p>Không.</p>
+        </div>
+      </div>
+    </main>
+
+  <script src="js/scripts.js"></script>
+  <!-- Accordion script -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const ans = btn.nextElementSibling;
+        ans.style.maxHeight = ans.style.maxHeight ? null : ans.scrollHeight + 'px';
+        btn.classList.toggle('open');
+      });
+    });
+  </script>
+
+<!-- ===== Site Footer ===== -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <!-- Cột Liên hệ -->
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <p><strong>Email:</strong> boyneu2808@gmail.com</p>
+      <p><strong>Địa chỉ:</strong> Đại học Kinh tế Quốc dân, 207 Giải Phóng, Phường Đồng Tâm, Q. Hai Bà Trưng, Hà Nội</p>
+      <p><strong>SDT:</strong> (+84) 961 654 937</p>
+    </div>
+
+    <!-- Cột Liên kết nhanh -->
+    <div class="footer-col">
+      <h4>Liên kết nhanh</h4>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="news.html">NEU Auto News</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright: ©2024 - NEU Auto. All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Website bán xe sang cao cấp" />
+  <title>Chi tiết sản phẩm – NEU Auto</title>
+  <!-- link đến file CSS riêng -->
+  <link rel="stylesheet" href="css/product-detail.css"/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!-- ===== Header / Nav ===== -->
+<header>
+  <div class="container">
+    <nav>
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="images/logo.svg" alt="Xe Sang Logo" /> <!-- Đặt ảnh logo -->
+        <span class="logo-text">NEU Auto</span> 
+      </a>
+      <ul>
+        <li><a href="index.html" class="active">Trang chủ</a></li>
+        <li><a href="news.html">Tin tức</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="#" id="nav-login">Đăng nhập</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Overlay & Login Modal ===== -->
+<div id="overlay" class="overlay hidden"></div>
+
+<div id="login-modal" class="modal hidden">
+  <div class="modal-header">
+    <h3>Đăng nhập</h3>
+    <button id="close-modal" class="close-btn">&times;</button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="login-user">Tên người dùng hoặc địa chỉ email</label>
+      <input type="text" id="login-user" placeholder="Nhập tên hoặc email">
+    </div>
+    <div class="form-group">
+      <label for="login-pass">Mật khẩu</label>
+      <div class="input-with-icon">
+        <input type="password" id="login-pass" placeholder="Nhập mật khẩu">
+        <button type="button" class="toggle-visibility" aria-label="Hiện mật khẩu">👁️</button>
+      </div>
+    </div>
+    <div class="form-options">
+      <label><input type="checkbox" id="remember"> Ghi nhớ</label>
+      <a href="#" class="forgot">Quên mật khẩu?</a>
+    </div>
+    <button id="btn-login" class="btn-primary">Đăng nhập</button>
+  </div>
+</div>
+  <div id="overlay" class="overlay hidden"></div>
+  <div id="login-modal" class="modal hidden">…</div>
+
+  <!-- ===== Nội dung chi tiết ===== -->
+  <div class="detail-wrapper" id="detail-wrapper">
+    <div class="detail-image">
+      <img id="main-image" src="" alt=""/>
+    </div>
+    <div class="detail-info">
+      <h1 id="product-title"></h1>
+      <p class="overview" id="product-overview"></p>
+      <div class="price" id="product-price"></div>
+      <div class="info-box" id="product-specs"></div>
+      <button class="chat-button">Chat với Tư vấn viên</button>
+    </div>
+  </div>
+
+  <!-- script khởi tạo detail, import dữ liệu từ products.js -->
+  <script type="module" src="js/product-detail.js"></script>
+  <!-- ===== Site Footer ===== -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <!-- Cột Liên hệ -->
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <p><strong>Email:</strong> boyneu2808@gmail.com</p>
+      <p><strong>Địa chỉ:</strong> Đại học Kinh tế Quốc dân, 207 Giải Phóng, Phường Đồng Tâm, Q. Hai Bà Trưng, Hà Nội</p>
+      <p><strong>SDT:</strong> (+84) 961 654 937</p>
+    </div>
+
+    <!-- Cột Liên kết nhanh -->
+    <div class="footer-col">
+      <h4>Liên kết nhanh</h4>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="news.html">NEU Auto News</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright: ©2024 - NEU Auto. All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* Hero banner */
+.hero-detail {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideDown 0.8s ease-out forwards;
+  }
+  .hero-detail::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.45);
+  }
+  .hero-overlay {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 1rem;
+  }
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+  }
+  .hero-overlay .meta {
+    font-size: .9rem;
+    opacity: .8;
+  }
+  
+  /* Layout chính */
+  .news-detail-wrapper {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  /* Cột trái */
+  .detail-content {
+    flex: 3;
+    opacity: 0;
+    animation: slideUp 0.8s ease-out .4s forwards;
+  }
+  .article-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+  .article-content h2 {
+    font-size: 2rem;           /* 32px */
+    color: #ffffff;            /* xám đậm */
+    margin-top: 1.5rem;
+  }
+  .article-content p {
+    font-size: 1.1rem;         /* ~18px */
+    color: #fafafa;            /* xám rất đậm */
+    line-height: 1.8;
+  }
+  .article-content ul {
+    font-size: 0.9rem;         /* ~18px */
+    color: #01bbff;            /* xám rất đậm */
+    line-height: 1.8;
+  }
+  /* Comment form */
+  .comment-form {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #f9fafb;
+    border-radius: 8px;
+  }
+  .comment-form h2 { margin-bottom: 1rem; }
+  .comment-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .comment-form input,
+  .comment-form textarea {
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: .25rem;
+  }
+  .comment-form button {
+    margin-top: 1rem;
+    padding: .75rem 1.5rem;
+    background: #1d4ed8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Cột phải: reuse sidebar từ news.css */
+  .sidebar {
+    flex: 1;
+    position: sticky;
+    top: var(--navbar-height);
+  }
+  
+  /* Keyframes */
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
